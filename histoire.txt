@@ -1,0 +1,27 @@
+Ceci est l'occasion d'écrire une petite histoire, afin de tester notre fonction get_next_line.
+Le but, bien évidemment est de renvoyer la ligne suivante d'un fichier, à chaque appel de la fonction.
+Ce texte
+sera un peu bizarre dans
+sa
+
+
+construction, il y aura...
+		des sauts à la ligne inattendus afin de tester la robustesse de la fonction.
+		Pour le moment ça semble bien se 
+passer !
+J'ai même fait un test de
+fuite de mémoire avec valgrind et tout semble bon !
+On free bien le stash quand il on arrive à la fin du texte ou bien s'il y a une erreur.
+Pour le buffer
+J'ai
+préféré faire une allocation dans le stack afin de ne pas avoir à gérer la mémoire.
+Cela évite des problèmes.
+Les allocations dans le stack sont rapides et gérées automatiquement, sa durée de vie est limitée à la durée de la fonction.
+Cependant, les allocations dans le stack disposent de moins d'espace, la taille de stack excède rarement les 8Mo, dans le sujet il demandé de tester
+avec un BUFFER_SIZE de 10000000.
+Evidemment,
+ça crash,
+on est donc reparti sur du malloc.
+Rien de bien compliqué en soi !
+Tout semble bon maintenant.
+Une bonne journée à tout le monde !
