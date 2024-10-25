@@ -88,6 +88,7 @@ char	*read_from_file(int fd, char **stash)
 			break ;
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 	}
+	free(buffer);
 	if (bytes_read == -1)
 		*stash = free_and_null(stash);
 	return (*stash);
