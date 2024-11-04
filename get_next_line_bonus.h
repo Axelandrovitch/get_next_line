@@ -7,6 +7,8 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
+# endif
+# ifndef MAX_FILES
 #  define MAX_FILES 10
 # endif
 

@@ -96,7 +96,7 @@ char	*read_from_file(int fd, char **stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash[10];
+	static char	*stash[MAX_FILES];
 	char		*next_line;
 
 	next_line = NULL;
